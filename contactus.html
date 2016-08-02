@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Vecta Corp.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+    
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.mobilemenu.js"></script>
+    <script>
+		$(document).ready(function(){
+			$('#responsive-menu').mobileMenu();
+		});
+	</script>
+    <style>
+        fieldset {
+          border: 0;
+        }
+        label {
+          display: block;
+          margin: 30px 0 0 0;
+        }
+        .overflow {
+          height: 100px;
+        }
+        #modal {
+            background-color: aliceblue;
+        }
+    </style>
+    
+</head>
+    
+<body>
+	<main class="container">
+		<figure class="three columns">
+			<img src="images/logo.gif" class="scale-with-grid" alt="">
+		</figure>
+		
+		<nav class="thirteen columns">
+			<ul id="responsive-menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="solutions.html">Solutions</a></li>
+				<li><a href="support.html">Support</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		
+		<header class="sixteen columns">
+			<img src="images/header.gif" class="scale-with-grid" alt="">
+		</header>
+		
+		<section id="welcome" class="eleven columns">
+			<h4>Contact Us</h4>
+			<form name="contactform" action="http://www.vectacorp.com/vc/scripts/contactus.asp" method="post">
+				<fieldset>
+			    <legend>Contact a Sales Representative</legend>
+			    Name:
+			    <input type="text" name="name" maxlength="30" required="">
+			    Company Name:
+			    <input type="text" name="companyname" maxlength="30" required="">
+			    Phone:
+			    <input type="tel" name="phonenumber" maxlength="25" required="" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Format: 555-555-5555">
+			    
+			    Email:
+				<input type="email" name="email" maxlength="30" required="">
+			    <br>
+<!-- Step 7. JQuery UI Checkbox Buttons here... -->
+<div data-role="fieldcontain">
+  <fieldset data-role="controlgroup">
+     <legend>What VectaCorp products are you interested in?</legend>
+     <label for="vProspectID">vProspect 2.0</label>
+     <input type="checkbox" name="product" id="vProspectID" class="custom">
+            
+     <label for="vConvertID">vConvert 2.0</label>
+     <input type="checkbox" name="product" id="vConvertID" class="custom">
+      
+     <label for="vRetainID">vRetain 1.0</label>      
+     <input type="checkbox" name="product" id="vRetainID" class="custom">  
+   </fieldset>
+</div>                                       
+<!-- End JQuery UI Radio Buttons code-->
+                    
+<!--Step 8 UI Radio button Code-->
+<!--<form>-->
+  <fieldset>
+    <legend>What is your current infrastructure?</legend>
+    <div id="radio">
+      <input type="radio" id="macID" name="infrastructure" value"mac">
+      <label for="macID">Mac</label>
+ 
+      <input type="radio" id="linuxID" name="infrastructure" checked="checked" value="linux">
+      <label for="linuxID">Linux</label>
+ 
+      <input type="radio" id="unixID" name="infrastructure" value="unix">
+      <label for="unixID">Unix</label>
+        
+      <input type="radio" id="windowsID" name="infrastructure" value="windows">
+      <label for="windowsID">Windows</label> 
+    </div>
+  </fieldset>
+<!--</form>-->
+<!--End of New UI Radio Button Code-->                   
+<br>
+                    
+<!--Step 9 New jquery ui drop down code-->
+<fieldset>
+    <label for="numberID">How many employees do you have?</label>
+    <select name="number" id="numberID">
+      <option>1-10</option>
+      <option>11-100</option>
+      <option>101-1000</option>
+      <option>More than 1000</option>
+    </select>
+</fieldset>
+
+<fieldset>                    
+    <label for="sourceID">How did you hear about us?</label>
+    <select name="number" id="sourceID">
+      <option>Magazine Ad</option>
+      <option>Radio Ad</option>
+      <option>TV Ad</option>
+      <option>Word of Mouth</option>
+      <option>Other</option>  
+    </select>  
+</fieldset>              
+<!--end new jquery ui drop down code-->
+
+<!-- 10.New JQuery UI Submit Button-->
+                    
+<input id="submitbutton" type="submit" name="submit" value="Submit">                   
+ 
+                    
+<!--End of new JQuery UI Submit Button-->
+                    
+<!--MODAL POPUP MESSAGE-->
+<div id="modal" title="Contact Us">
+  <p>Thanks!<br><br>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    Thank you for your inquiry.  We will get in touch with you soon!
+  </p>
+</div>
+<!--End MODAL POPUP MESSAGE-->
+                    
+<!--
+   Questions or comments for our sales representatives?
+   <textarea name="questions" size="30" rows="5"></textarea>
+   <input type="submit" name="submit" value="Submit Now">
+-->
+</fieldset>
+</form>
+</section>
+
+<section id="testimonials" class="five columns">
+    <h4>Map</h4>
+    <p>&nbsp;</p>
+</section>
+</main>
+    <script>     
+//Assignment 9
+
+//Contact US
+
+//7.Convert the checkbox buttons into jQuery UI checkbox buttons.
+$("document").ready(function(){
+   $("input[type='checkbox']").checkboxradio();
+});
+
+//8.Convert the radio buttons into jQuery UI radio buttons.
+$("document").ready(function(){
+   $("input[type='radio']").checkboxradio(); 
+});
+                         
+//9.Convert the drop down menu into a jQuery UI selectmenu.
+$( function() {
+       //$( "#speed" ).selectmenu();
+       //$( "#files" ).selectmenu();
+       $( "#numberID" )
+          .selectmenu()
+          .selectmenu( "menuWidget" )
+          .addClass( "overflow" );
+       $( "#sourceID" ).selectmenu();
+  } );
+              
+//10.Convert the submit button into a jQuery UI button. When the user clicks submit, display a jQuery UI
+// dialog box that thanks the user for their inquiry…then process the submission.
+
+//a.Convert the submit button into a jQuery UI button.
+$("#modal").hide();
+$( "input[type=submit]" ).button()      
+        
+//b.When the user clicks submit, display a jQuery UI dialog box that thanks the user for their inquiry.
+
+$('form').submit(function(e) {
+ if (true) {
+    e.preventDefault();
+    $( "#modal" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "fade",
+        duration: 500
+      },
+      hide: {
+        effect: "fade",
+        duration: 1000
+      },
+        buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+    $( "#modal" ).dialog( "open" );  
+     $( 'form').fadeOut();
+ }
+} );        
+               
+        
+//c.then process the submission.
+        
+        
+//end of assignment 9.    
+    </script>
+</body>
+</html>
